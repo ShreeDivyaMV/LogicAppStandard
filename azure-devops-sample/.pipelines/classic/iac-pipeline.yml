@@ -19,7 +19,7 @@ stages:
     - task: CopyFiles@2
       displayName: 'Copy ARM templates'
       inputs:
-        sourceFolder: 'LogicAppssStandard/azure-devops-sample/deploy'
+        sourceFolder: 'azure-devops-sample/deploy'
         targetFolder: '$(Build.ArtifactStagingDirectory)'
     - publish: '$(Build.ArtifactStagingDirectory)'
       artifact: $(artifactName)
