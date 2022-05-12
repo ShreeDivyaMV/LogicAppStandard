@@ -36,7 +36,7 @@ stages:
             displayName: 'Deploy logic app workflows'
             inputs:
               # TODO: Fill in with the name of your Azure service connection
-              azureSubscription: ''
+              azureSubscription: 'LAStandard'
               appType: 'functionApp'
               appName: '$(logicAppName)'
               package: '$(Pipeline.Workspace)/cipipeline/$(logicAppCIArtifactName)/$(resources.pipeline.cipipeline.runID).zip'
