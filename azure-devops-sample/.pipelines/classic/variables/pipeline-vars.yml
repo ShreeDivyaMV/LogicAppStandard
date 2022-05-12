@@ -10,7 +10,7 @@ variables:
   resourceGroupName: 'rg-wus-$(projectName)-$(suffix)'
 
   # Storage - make sure this is unique!
-  storageName: 'sa$(projectName)$(suffix)'
+  storageName: 'shmvsa$(projectName)$(suffix)'
   appServicePlanName: 'asp$(projectName)$(suffix)'
 
   #  Logic App
