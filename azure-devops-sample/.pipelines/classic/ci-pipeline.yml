@@ -24,7 +24,7 @@ jobs:
   - task: ArchiveFiles@2
     displayName: 'Create project zip'
     inputs:
-      rootFolderOrFile: '$(System.DefaultWorkingDirectory)/project_output/logic'
+      rootFolderOrFile: 'project_output/logic'
       includeRootFolder: false
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
