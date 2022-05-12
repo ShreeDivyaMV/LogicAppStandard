@@ -16,7 +16,7 @@ jobs:
   - task: CopyFiles@2
     displayName: 'Create project folder'
     inputs:
-      SourceFolder: '$(System.DefaultWorkingDirectory)/logic'
+      SourceFolder: '$(System.DefaultWorkingDirectory)/azure-devops-sample/logic'
       Contents: |
         **
       TargetFolder: 'project_output'
