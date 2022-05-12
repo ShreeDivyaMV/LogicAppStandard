@@ -7,14 +7,14 @@ variables:
 
   # Resource Group
   resourceGroupLocation: 'westus'
-  resourceGroupName: 'rg-wus-$(projectName)-$(suffix)'
+  resourceGroupName: 'shmv-rg-wus-$(projectName)-$(suffix)'
 
   # Storage - make sure this is unique!
   storageName: 'shmvsa$(projectName)$(suffix)'
-  appServicePlanName: 'asp$(projectName)$(suffix)'
+  appServicePlanName: 'shmvasp$(projectName)$(suffix)'
 
   #  Logic App
-  logicAppName: 'la-wus-$(projectName)-$(suffix)'
+  logicAppName: 'shmv-la-wus-$(projectName)-$(suffix)'
 
   # API Connections - if you change this name, you must change the reference in workflow.json
   blobConnectionName: 'azureblob'
