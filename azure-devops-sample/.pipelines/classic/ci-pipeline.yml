@@ -16,9 +16,9 @@ jobs:
   - task: CopyFiles@2
     displayName: 'Create project folder'
     inputs:
-      SourceFolder: '$(System.DefaultWorkingDirectory)'
+      SourceFolder: '$(System.DefaultWorkingDirectory)/logic'
       Contents: |
-        logic/**
+        **
       TargetFolder: 'project_output'
 
   - task: ArchiveFiles@2
