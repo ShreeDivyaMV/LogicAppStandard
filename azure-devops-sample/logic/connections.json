@@ -11,7 +11,7 @@
             "id": "@appsetting('azureFunctionOperation_functionResourceURI')"
         },
         "triggerUrl": "@appsetting('azureFunctionOperation_functionTriggerURI')"
-       
+    }
     },
   "managedApiConnections": {
     "azureblob": {
