@@ -1,15 +1,39 @@
 {
-    "managedApiConnections": {
-      "azureblob": {
-        "api": {
-          "id": "/subscriptions/@appsetting('WORKFLOWS_SUBSCRIPTION_ID')/providers/Microsoft.Web/locations/@appsetting('WORKFLOWS_LOCATION_NAME')/managedApis/azureblob"
+  "functionConnections": {
+    "azureFunctionOperation": {
+        "authentication": {
+            "name": "Code",
+            "type": "QueryString",
+            "value": "@appsetting('azureFunctionOperation_functionAppKey')"
         },
-        "connection": {
-          "id": "/subscriptions/@appsetting('WORKFLOWS_SUBSCRIPTION_ID')/resourceGroups/@appsetting('WORKFLOWS_RESOURCE_GROUP_NAME')/providers/Microsoft.Web/connections/azureblob"
+        "displayName": "FunctionApiConnection",
+        "function": {
+            "id": "@appsetting('azureFunctionOperation_functionResourceURI')"
         },
-        "connectionRuntimeUrl": "@appsetting('BLOB_CONNECTION_RUNTIMEURL')",
-        "authentication": "@parameters('blob_auth')"
-      }
+        "triggerUrl": "@appsetting('azureFunctionOperation_functionTriggerURI')"
+       
+    },
+  "managedApiConnections": {
+    "azureblob": {
+      "api": {
+        "id": "/subscriptions/@appsetting('WORKFLOWS_SUBSCRIPTION_ID')/providers/Microsoft.Web/locations/@appsetting('WORKFLOWS_LOCATION_NAME')/managedApis/azureblob"
+      },
+      "connection": {
+        "id": "/subscriptions/@appsetting('WORKFLOWS_SUBSCRIPTION_ID')/resourceGroups/@appsetting('WORKFLOWS_RESOURCE_GROUP_NAME')/providers/Microsoft.Web/connections/azureblob"
+      },
+      "connectionRuntimeUrl": "@appsetting('BLOB_CONNECTION_RUNTIMEURL')",
+      "authentication": "@parameters('blob_auth')"
+    }
+  },
+  "serviceProviderConnections": {
+    "serviceBus": {
+      "parameterValues": {
+        "connectionString": "@appsetting('serviceBus_connectionString')"
+      },
+      "serviceProvider": {
+        "id": "/serviceProviders/serviceBus"
+      },
+      "displayName": "ServiceBus-Builtin"
     }
   }
-  
+}
