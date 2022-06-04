@@ -17,7 +17,7 @@ on:
   # Triggers when an environment file has been changed  
   push:
     paths:
-      - "logic/**"
+      - "github-sample/logic/**"
       - ".github/workflows/logicapp_deploy.yml"
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Package logic
-      run: (cd logic; mkdir -p ../output; zip -r ../output/logic.zip .)
+      run: (cd github-sample/logic; mkdir -p ../output; zip -r ../output/logic.zip .)
     - name: Upload app zip package
       uses: actions/upload-artifact@v2
       with:
